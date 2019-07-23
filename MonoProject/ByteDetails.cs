@@ -101,5 +101,12 @@ namespace MonoProject {
 		//|              Byte |  0.3435 ns | 0.0031 ns | 0.0029 ns |
 		//|  ByteCheckedBlock |  0.3526 ns | 0.0058 ns | 0.0054 ns |
 		//| CheckedByteStruct | 21.7849 ns | 0.0337 ns | 0.0299 ns |
+		
+		// x30 slower with aggressive inlining
+		//|            Method |       Mean |     Error |    StdDev |
+		//|------------------ |-----------:|----------:|----------:|
+		//|              Byte |  0.4148 ns | 0.0937 ns | 0.1002 ns |
+		//|  ByteCheckedBlock |  0.4023 ns | 0.0608 ns | 0.0539 ns |
+		//| CheckedByteStruct | 12.3198 ns | 0.2624 ns | 0.2455 ns |
 	}
 }
