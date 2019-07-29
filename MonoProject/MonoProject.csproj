@@ -196,8 +196,12 @@
     <Compile Include="ByteVsCheckedByte.cs" />
     <Compile Include="CheckedByte.cs" />
     <Compile Include="DetailsWrapper.cs" />
+    <Compile Include="IntDetails.cs" />
+    <Compile Include="LongDetails.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SbyteDetails.cs" />
+    <Compile Include="ShortDetails.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>

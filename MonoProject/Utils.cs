@@ -1,13 +1,32 @@
 using System;
+using System.Linq;
 
 namespace MonoProject {
 	static class Utils {
-		public static string GetBitString(byte b) {
-			var chars = new char[8];
-			for (var i = 0; i < chars.Length; i++) {
-				chars[i] = GetBit(b, i) ? '1' : '0';
+		public static bool[] GetBits(byte b) {
+			var bits = new bool[8];
+			for (var i = 0; i < bits.Length; i++) {
+				bits[i] = GetBit(b, i);
 			}
+			return bits;
+		}
+		
+		public static bool[] GetBits(sbyte b) {
+			return GetBits((byte)b);
+		}
+		
+		public static string GetBitString(byte b) {
+			var chars = GetBits(b).Reverse().Select(bit => bit ? '1' : '0').ToArray();
 			return new string(chars);
+		}
+		
+		public static string GetBitString(sbyte b) {
+			return GetBitString((byte)b);
+		}
+
+		public static string GetBitString(byte[] bytes) {
+			var parts = bytes.Select(GetBitString).Reverse();
+			return string.Join(" ", parts);
 		}
 
 		public static bool GetBit(byte wantedByte, int index) {
@@ -15,6 +34,15 @@ namespace MonoProject {
 			var bitwiseAnd = wantedByte & byteWithBitSet;
 			var bitIsSet = bitwiseAnd != 0;
 			return bitIsSet;
+		}
+
+		public static byte GetByte(bool[] bits) {
+			byte acc = 0;
+			for (var i = 0; i < 8; i++) {
+				var bitSet = (byte)(1 << i);
+				acc += bits[i] ? bitSet : (byte)0;
+			}
+			return acc;
 		}
 
 		public static string Try<T>(Func<T> func) {

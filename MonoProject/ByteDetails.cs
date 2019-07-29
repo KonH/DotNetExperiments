@@ -3,9 +3,6 @@ using System.Diagnostics;
 
 namespace MonoProject {
 	static class ByteDetails {
-		// byte = System.Byte
-		// ./mcs/class/corlib/System/Byte.cs
-
 		public static void Run() {
 			ToByte(byte.MinValue);
 			ToByte(byte.MaxValue);
@@ -45,8 +42,7 @@ namespace MonoProject {
 		}
 		
 		static void ToByte(byte value) {
-			var b = Convert.ToByte(value);
-			Console.WriteLine($"{value,-3} = {b,-2:X} = {Utils.GetBitString(b)}");
+			Console.WriteLine($"{value,-3} = {value,-2:X} = {Utils.GetBitString(value)}");
 		}
 
 		static bool IsCheckedModeEnabled() {
