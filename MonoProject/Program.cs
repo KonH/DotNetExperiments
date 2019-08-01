@@ -13,6 +13,8 @@ namespace MonoProject {
 			DetailsWrapper.Run("short", ShortDetails.Run);
 			DetailsWrapper.Run("int", IntDetails.Run);
 			DetailsWrapper.Run("long", LongDetails.Run);
+			DetailsWrapper.Run("double", DoubleDetails.Run);
+			DetailsWrapper.Run("float", FloatDetails.Run);
 		}
 
 		static void RunBenchmarks() {
