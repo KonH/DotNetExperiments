@@ -195,6 +195,7 @@
     <Compile Include="ByteDetails.cs" />
     <Compile Include="ByteVsCheckedByte.cs" />
     <Compile Include="CheckedByte.cs" />
+    <Compile Include="ClosureTest.cs" />
     <Compile Include="DetailsWrapper.cs" />
     <Compile Include="DoubleDetails.cs" />
     <Compile Include="FloatDetails.cs" />

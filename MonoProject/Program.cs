@@ -3,7 +3,8 @@
 namespace MonoProject {
 	static class Program {
 		public static void Main(string[] args) {
-			RunDetails();
+			ClosureTest.Run();
+			RunClosureBenchmark();
 		}
 
 		static void RunDetails() {
@@ -17,8 +18,12 @@ namespace MonoProject {
 			DetailsWrapper.Run("float", FloatDetails.Run);
 		}
 
-		static void RunBenchmarks() {
+		static void RunByteVsCheckedByteBenchmark() {
 			BenchmarkRunner.Run<ByteVsCheckedByte>();
+		}
+
+		static void RunClosureBenchmark() {
+			BenchmarkRunner.Run<ClosureVsValueClosure>();
 		}
 	}
 }
