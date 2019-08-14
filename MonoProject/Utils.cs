@@ -10,16 +10,16 @@ namespace MonoProject {
 			}
 			return bits;
 		}
-		
+
 		public static bool[] GetBits(sbyte b) {
 			return GetBits((byte)b);
 		}
-		
+
 		public static string GetBitString(byte b) {
 			var chars = GetBits(b).Reverse().Select(bit => bit ? '1' : '0').ToArray();
 			return new string(chars);
 		}
-		
+
 		public static string GetBitString(sbyte b) {
 			return GetBitString((byte)b);
 		}

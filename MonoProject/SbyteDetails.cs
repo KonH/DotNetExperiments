@@ -17,11 +17,11 @@ namespace MonoProject {
 			ChangeSign(127, -127);
 			ChangeSign(-128,-128);
 		}
-		
+
 		static void ToByte(sbyte value) {
 			Console.WriteLine($"{value,4} = {value,2:X} = {Utils.GetBitString(value)}");
 		}
-		
+
 		// Negative numbers presented using two’s complement
 
 		static void ChangeSign(sbyte originalValue, sbyte expectedValue) {
@@ -32,7 +32,7 @@ namespace MonoProject {
 			Console.WriteLine("Should be:");
 			ToByte(expectedValue);
 		}
-		
+
 		static sbyte ChangeSign(sbyte value) {
 			var bits = Utils.GetBits(value);
 			var inverseBits = bits.Select(b => !b).ToArray();

@@ -22,7 +22,7 @@ namespace MonoProject {
 		static bool True() {
 			return true;
 		}
-		
+
 		static bool Compare(bool x, bool y) {
 			return x == y;
 		}

@@ -10,7 +10,7 @@ namespace MonoProject {
 		}
 
 		// Actual code
-		
+
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static CheckedByte operator +(CheckedByte b1, CheckedByte b2) {
 			var result = b1._value + b2._value;
@@ -19,8 +19,8 @@ namespace MonoProject {
 			}
 			return new CheckedByte((byte)result);
 		}
-		
-		
+
+
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static CheckedByte operator -(CheckedByte b1, CheckedByte b2) {
 			var result = b1._value - b2._value;
@@ -29,14 +29,14 @@ namespace MonoProject {
 			}
 			return new CheckedByte((byte)result);
 		}
-		
+
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static implicit operator CheckedByte(byte b) {
 			return new CheckedByte(b);
 		}
-		
+
 		// Boilerplate for compatibility
-		
+
 		public int CompareTo(CheckedByte other) {
 			return _value.CompareTo(other);
 		}
